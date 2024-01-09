@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Create Room{% endblock %}
+{% block body %}
+    <link rel="stylesheet" href="css\createRoom.css">
+    <form action="room/api" method="post">
+        Room Code: <input type="text" name="code" value="{{ code }}" readonly> <br>
+        Room Name <input type="text" placeholder="Name" name="name"> <br>
+        Guest can skip song? <input type="checkbox" name="skip" value=false> <br>
+        Count votes to skip <input type="number" name="votes" value="0"> <br>
+        <button>CREATE ROOM</button>
+    </form>
+{% endblock %}
